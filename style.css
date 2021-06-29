@@ -1,7 +1,9 @@
 ul{
     list-style-type: none;
 }
-
+button:hover{
+    background-color: lightgray;
+}
 .input{
     line-height: 40px;
     border-radius: 12px;
@@ -17,6 +19,13 @@ li{
     border-bottom: 1px solid gray;
 }
 
+li:hover{
+    background-color: lightgray;
+}
+
+.fa-times:hover{
+    color: red;
+}
 .logo{
     padding-bottom: 50px;
 }
