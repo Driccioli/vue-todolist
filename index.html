@@ -3,26 +3,33 @@
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Boolean Todo list</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 </head>
-<body>
-    <div id="app">
-        <input id="newTaskElement" v-model="newTask" @keyup.enter="newTask" >
-        <button @click="addTask">Aggiungi</button>
-        <ul>
-            <li v-for="(task,index) in todo">
-                <i :class="iconToDoClass(index)"></i>
+<body class="d-flex p-5 container justify-content-center align-items-center">
+    <div class="container justify-content-center col-12" id="app">
+        <div class="row justify-content-center logo">
+            <img class="col-4" src="img/logo.png" alt="Boolean logo" >
+        </div>
+        
+        <div class="row justify-content-center col-12">
+            <input class="col-10 input" id="newTaskElement" v-model="newTask" @keyup.enter="newTask" placeholder="Nuovo Todo">
+            <button class="col-2 input" @click="addTask">Aggiungi</button>
+        </div>
+        
+        <ul class="row justify-content-between col-12">
+            <li class="d-flex justify-content-between align-items-center col-12" v-for="(task,index) in todo">
+                
                 {{ task }}
-                <i class="fas fa-backspace" @click="deleteTask(index)"></i>
-                <br>  
+                <i class="fas fa-times" @click="deleteTask(index)"></i>
             </li>
         </ul>
         
     </div>
-    <script src="snack.js"></script>
+    <script src="todo.js"></script>
 </body>
 </html>

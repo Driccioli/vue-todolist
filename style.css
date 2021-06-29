@@ -1,0 +1,22 @@
+ul{
+    list-style-type: none;
+}
+
+.input{
+    line-height: 40px;
+    border-radius: 12px;
+    padding: 0 30px;
+}
+ul{
+    padding-top: 20px;
+}
+li{
+    line-height: 60px;
+    font-size: 30px;
+    border-top:1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.logo{
+    padding-bottom: 50px;
+}
